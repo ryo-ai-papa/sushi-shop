@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#ba443c">
+<title>へい、らっしゃい！おすしやさん</title>
+<link rel="stylesheet" href="./style.css">
+<script src="./game.js" defer></script>
+</head>
+<body>
+<main id="app">
+<div class="awning" aria-hidden="true"><span>へい、らっしゃい！</span></div>
+<header class="toolbar">
+<button id="back" aria-label="タイトルにもどる">↶ <span>もどる</span></button>
+<div id="progress" aria-label="3人中0人にお届け"></div>
+<button id="sound" aria-pressed="true">♪ <span>おと ON</span></button>
+<button id="help" aria-pressed="true">☀ <span>おたすけ ON</span></button>
+</header>
+<section id="title" class="screen title-screen">
+<div class="title-copy"><p class="eyebrow">ちいさな いたまえさん</p><h1><span>へい、らっしゃい！</span><br>おすしやさん</h1><p>ぎゅっ、ぽん。おいしく なあれ！</p><button id="play" class="primary">あそぶ <b>▶</b></button><p class="voice-credit"><a href="./クレジット.html">こえ：VOICEVOX（4にん）</a></p></div>
+<div id="titleArt" class="title-art" aria-hidden="true"></div>
+</section>
+<section id="game" class="screen game-screen" hidden>
+<div class="customer-area"><div id="customer" role="img"></div><button id="order" aria-label="注文をもう一度きく"><span id="orderArt"></span><span id="orderText"></span><small>♪ もういちど</small></button><div class="shop-sign" aria-hidden="true">こころをこめて<br><b>にぎにぎ</b></div></div>
+<div class="counter"><p id="hint" role="status" aria-live="polite"></p><div class="worktop"><button id="rice" aria-label="ごはんをにぎる"><span id="riceArt"></span><span>ぎゅっ！</span></button><div id="plate" role="img" aria-label="空のお皿"><div id="sushi"></div></div><button id="serve" class="primary" hidden>へい、おまち！<span> ↑ </span></button></div></div>
+<div id="ingredients" aria-label="おすしのネタ"></div>
+</section>
+<section id="reward" class="screen reward-screen" hidden><div class="sticker"><div id="stickerArt"></div><strong>ありがとう</strong><span>おすしの めいじん！</span></div><div><h2>みんな にっこり！</h2><p>おいしい おすしを ありがとう</p><button id="more" class="primary">もっとあそぶ ▶</button><button id="finish">おしまい</button></div></section>
+<aside class="rotate"><svg viewBox="0 0 160 100" aria-hidden="true"><rect x="42" y="15" width="85" height="55" rx="10" fill="#fff9e9" stroke="#864c38" stroke-width="5" transform="rotate(-15 85 45)"/><path d="M25 65 Q30 95 80 88" fill="none" stroke="#bd493d" stroke-width="6" stroke-linecap="round"/><path d="m72 78 13 9-14 8" fill="none" stroke="#bd493d" stroke-width="6"/></svg><b>よこにすると<br>あそびやすいよ</b><span>スマホを よこにしてね</span></aside>
+</main>
+</body></html>
